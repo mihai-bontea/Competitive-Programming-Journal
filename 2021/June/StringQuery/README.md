@@ -52,3 +52,22 @@ Union of a set containing the letter 'a' with a set containing the letter 'z'(la
 10000000.00000000.00000000.01000000
 ```
 
+However, when all is said and done, this solution does not seem to be efficient enough, as it takes too much time for the last 2 tests.
+
+![1](https://user-images.githubusercontent.com/79721547/120254596-dc2ecb00-c292-11eb-98aa-07ca9c5f9322.png)
+
+## Squeezing the last drop of efficiency
+
+```
+// Makes cin faster
+ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+```
+
+By adding this line, cin is getting faster which is important since we are reading a really large string. This enables me to pass another test.
+
+![2](https://user-images.githubusercontent.com/79721547/120254856-6d9e3d00-c293-11eb-9ede-f2aae353f423.png)
+
+To pass the last test, I inlined all the functions which decreased the time even more and enabled me to pass all the tests.
+
+![3](https://user-images.githubusercontent.com/79721547/120255058-cc63b680-c293-11eb-8bd1-932367b7dc12.png)
+
