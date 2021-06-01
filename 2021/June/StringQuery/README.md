@@ -1,5 +1,7 @@
 # StringQuery
 
+Translated from https://www.pbinfo.ro/probleme/3526/stringquery
+
 ## Problem statement
 
 A string **s** of length **n** is given along with **q** queries of type **(op, x, y)**

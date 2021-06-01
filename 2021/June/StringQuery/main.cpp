@@ -26,7 +26,6 @@ inline void query_tree(int node, int left, int right, int x, int y)
     else
     {
         int mid = (left + right) / 2;
-        int res1 = 0, res2 = 0;
 
         if (x <= mid)
             query_tree(2 * node, left, mid, x, y);
