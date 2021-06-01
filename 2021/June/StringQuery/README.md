@@ -16,7 +16,8 @@ characters from the interval **[x, y]** will be written to standard output.
 ## Example
 
 #### Input
-```4
+```
+4
 aaaa
 4
 1 2 b
@@ -26,7 +27,8 @@ aaaa
 ```
 
 #### Output
-```2
+```
+2
 3
 ```
 
