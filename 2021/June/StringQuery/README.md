@@ -15,22 +15,15 @@ characters from the interval **[x, y]** will be written to standard output.
 
 ## Example
 
-`4
-
+```4
 aaaa
-
 4
-
 1 2 b
-
 1 3 c
-
 0 1 2
+0 2 4```
 
-0 2 4`
-
-`2
-
-3`
+```2
+3```
 
 
