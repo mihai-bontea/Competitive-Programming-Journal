@@ -71,3 +71,6 @@ To pass the last test, I inlined all the functions which decreased the time even
 
 ![3](https://user-images.githubusercontent.com/79721547/120255058-cc63b680-c293-11eb-8bd1-932367b7dc12.png)
 
+Changing the return type of the function *query_tree* from int to void and using a global variable for storing the result also makes a noticeable difference in time,
+but not as dramatic as inlining.
+

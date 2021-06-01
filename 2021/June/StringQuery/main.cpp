@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int segment_tree[NMax * 4], n, m;
+int segment_tree[NMax * 4], n, m, res;
 string str;
 
 inline void build_tree(int node, int left, int right)
@@ -19,21 +19,20 @@ inline void build_tree(int node, int left, int right)
     }
 }
 
-inline int query_tree(int node, int left, int right, int x, int y)
+inline void query_tree(int node, int left, int right, int x, int y)
 {
     if (x <= left && right <= y)
-        return segment_tree[node];
+        res |= segment_tree[node];
     else
     {
         int mid = (left + right) / 2;
         int res1 = 0, res2 = 0;
 
         if (x <= mid)
-            res1 = query_tree(2 * node, left, mid, x, y);
-        if (y > mid)
-            res2 = query_tree(2 * node + 1, mid + 1, right, x, y);
+            query_tree(2 * node, left, mid, x, y);
 
-        return res1 | res2;
+        if (y > mid)
+            query_tree(2 * node + 1, mid + 1, right, x, y);
     }
 }
 
@@ -82,7 +81,7 @@ int main()
         else
         {
             cin >> y;
-            int res = query_tree(1, 1, n, x, y);
+            query_tree(1, 1, n, x, y);
             int cnt = 0;
 
             // Counting the positive bits
