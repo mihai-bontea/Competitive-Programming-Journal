@@ -33,3 +33,22 @@ aaaa
 ```
 
 
+## Solution
+
+Due to the high number of queries, the data structure I chose is a **segment tree**, where every node will hold the set of letters that its corresponding interval contains.
+Additionally, *segment_tree[node] = segment_tree[2 * node] ∪ segment_tree[2 * node + 1]*.
+
+A frequency array could be used for the set implementation, but since the string can only contain lowercase letters, a space and time efficient solution would be to **use a
+single integer as a representation for a set**. When the set contains the i-th letter of the alphabet, the i-th bit will be set to 1. Conveniently, performing **set union**
+is done by simply performing **bitwise or** on two integers.
+
+#### Example
+
+Union of a set containing the letter 'a' with a set containing the letter 'z'(last 6 bits are unused).
+```
+10000000.00000000.00000000.00000000 |
+00000000.00000000.00000000.01000000
+===================================
+10000000.00000000.00000000.01000000
+```
+
