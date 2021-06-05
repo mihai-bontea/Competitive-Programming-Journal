@@ -53,7 +53,7 @@ A list of positive integers indexed from 1 is given. On this list 3 types of ope
 
 * For the type 3 operation which is more challenging, I needed to add 3 **int**(short will not work here because of overflows) to the struct: **left_prime_length**, 
 **right_prime_length**, **longest_prime_seq**. So for a particular node, the longest prime sequence will be the maximum between the longest prime sequence of its
-left and right child, or the sum of **right_prime_length** of the left child and **left_prime_lengt** of the right child.
+left and right child, or the sum of **right_prime_length** of the left child and **left_prime_length** of the right child.
 
 ![1](https://user-images.githubusercontent.com/79721547/120897309-151dc580-c62e-11eb-976a-d1fb65d3fa64.png)
 
@@ -67,4 +67,5 @@ Since the size of the input file is large, **input file parsing** is used, which
 
 I used https://www.infoarena.ro/parsare-fisier-intrare as inspiration for parsing.
 However, that version will cause some tests to fail because it doesn't take the return value of **fread** into account. The fix is available in my final code.
+
 
