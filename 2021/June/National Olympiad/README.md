@@ -6,7 +6,7 @@ Translated from https://www.pbinfo.ro/probleme/3059/lexicografic
 
 A list **v** formed from positive integers, not necessarily distinct, is given. On this list, we can perform only one type of operation: swapping two consecutive elements. 
 
-Given a number **K**, display the list which can be created using at most K swaps that is lexicographically minimal.
+Given a number **K**, display the list which can be created using at most **K** swaps that is lexicographically minimal.
 
 ## Restrictions and remarks
 
